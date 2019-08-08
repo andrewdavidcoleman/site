@@ -64,11 +64,11 @@ body {
 }
 
 img.piedmont-andrew {
-    height: 250px;
+    height: 350px;
     position: absolute;
     right: 20px;
     transform: rotate(4deg);
-    margin-top: 90px;
+    margin-top: 50px;
 }
 
 .about-section p, .about-section h1{
@@ -123,7 +123,7 @@ img.piedmont-andrew {
 }
 
 .portfolio-section .card:hover .image-layer {
-    opacity: .3;
+    opacity: .1;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     transition: all .15s ease-in-out;
@@ -135,7 +135,6 @@ img.piedmont-andrew {
 }
 
 .portfolio-section .link-layer {
-    cursor: pointer;
     position: absolute;
     opacity: 0;
     transition: all .15s ease-in-out;
@@ -145,13 +144,33 @@ img.piedmont-andrew {
     opacity: 1;
 }
 
+.portfolio-section .link-layer p {
+    text-align: center;
+    margin: 0;
+}
+
+.portfolio-section .icon-wrapper {
+    min-height: 56px;
+}
+
 .portfolio-section i {
-    font-size: 40px;
+    cursor: pointer;
+    font-size: 50px;
     transition: all .1s ease-in-out;
 }
 
 .portfolio-section i:hover {
-    font-size: 46px;
+    font-size: 56px;
+}
+
+.portfolio-section .stack-icon {
+    height: 50px;
+    width: 50px;
+}
+
+.portfolio-section .stack-icon.wide {
+    height: 50px;
+    width: 150px;
 }
 
 .blog-section {
