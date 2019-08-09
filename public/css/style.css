@@ -153,6 +153,11 @@ img.piedmont-andrew {
     min-height: 56px;
 }
 
+.portfolio-section a, .portfolio-section a:hover {
+    text-decoration: none;
+    color: black;
+}
+
 .portfolio-section i {
     cursor: pointer;
     font-size: 50px;

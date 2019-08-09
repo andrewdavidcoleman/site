@@ -9,9 +9,13 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/public'));
 
-  app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "/views/index.html"));
-  });
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "/public/main.html"));
+});
+
+app.get("/beer", function(req, res) {
+  res.sendFile(path.join(__dirname, "/public/beer.html"));
+});
 
 app.listen(PORT, function() {
 
