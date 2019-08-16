@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "/public/main.html"));
+  res.sendFile(path.join(__dirname, "/public/main2.html"));
 });
 
 app.get("/beer", function(req, res) {

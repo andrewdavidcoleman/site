@@ -2,13 +2,15 @@ html, body, #root {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: #242423;
+  color: #E8EDDF;
 }
 
 .animation-delay {
   animation-delay: 1s;
 }
 
-.fade-down-in {
+.fade-down-in-1 {
   position: relative;
   -webkit-animation: fadedown .75s, fadein .75s; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadedown .75s, fadein .75s; /* Firefox < 16 */
@@ -17,7 +19,7 @@ html, body, #root {
           animation: fadedown .75s, fadein .75s;
 }
 
-.fade-down-in-delay {
+.fade-down-in-2 {
   opacity: 0;
   position: relative;
   -webkit-animation: fadedown .75s, fadein .75s; /* Safari, Chrome and Opera > 12.1 */
@@ -30,11 +32,51 @@ html, body, #root {
       -ms-animation-fill-mode: forwards;
        -o-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: .3s;
-     -moz-animation-delay: .3s;
-      -ms-animation-delay: .3s;
-       -o-animation-delay: .3s;
-          animation-delay: .3s;
+  -webkit-animation-delay: .2s;
+     -moz-animation-delay: .2s;
+      -ms-animation-delay: .2s;
+       -o-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+.fade-down-in-3 {
+  opacity: 0;
+  position: relative;
+  -webkit-animation: fadedown .75s, fadein .75s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadedown .75s, fadein .75s; /* Firefox < 16 */
+      -ms-animation: fadedown .75s, fadein .75s; /* Internet Explorer */
+       -o-animation: fadedown .75s, fadein .75s; /* Opera < 12.1 */
+          animation: fadedown .75s, fadein .75s;
+  -webkit-animation-fill-mode: forwards;
+     -moz-animation-fill-mode: forwards;
+      -ms-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: .4s;
+     -moz-animation-delay: .4s;
+      -ms-animation-delay: .4s;
+       -o-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+.fade-down-in-4 {
+  opacity: 0;
+  position: relative;
+  -webkit-animation: fadedown .75s, fadein .75s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadedown .75s, fadein .75s; /* Firefox < 16 */
+      -ms-animation: fadedown .75s, fadein .75s; /* Internet Explorer */
+       -o-animation: fadedown .75s, fadein .75s; /* Opera < 12.1 */
+          animation: fadedown .75s, fadein .75s;
+  -webkit-animation-fill-mode: forwards;
+     -moz-animation-fill-mode: forwards;
+      -ms-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1s;
+     -moz-animation-delay: 1s;
+      -ms-animation-delay: 1s;
+       -o-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .fade-in {
@@ -92,9 +134,9 @@ html, body, #root {
 }
 
 .about-section {
-    height: 700px;
+    height: 800px;
     font-family: 'Proza Libre', sans-serif;
-
+    color: #E8EDDF;
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
         -ms-animation: fadein 2s; /* Internet Explorer */
@@ -102,25 +144,48 @@ html, body, #root {
             animation: fadein 2s;
 }
 
-.about-section h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 60px;
-}
-
 img.piedmont-andrew {
-    height: 350px;
-    position: absolute;
-    right: 20px;
-    transform: rotate(4deg);
-    margin-top: 50px;
+  height: 350px;
+  position: absolute;
+  right: 20px;
+  transform: rotate(4deg);
+  margin-top: 50px;
 }
 
-.about-section p, .about-section h1{
-    z-index: 2;
+.about-section h1{
+  z-index: 2;
+  font-family: 'Amatic SC';
+  font-size: 175px;
+}
+
+.about-section p {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #F5CB5C;
+}
+
+.about-section .nav-box {
+  height: 75px;
+  width: 150px;
+  border: 1px solid #F5CB5C;
+  /* font-family: 'Raleway', sans-serif; */
+  transition: all .15s ease-in-out;
+  cursor: pointer;
+  /* font-family: 'Patrick Hand SC', cursive; */
+  /* font-family: 'Khand', sans-serif; */
+  /* font-family: 'Shadows Into Light', cursive; */
+  font-family: 'Amatic SC', cursive;
+  /* font-family: 'Beth Ellen', cursive; */
+  /* font-family: 'Cinzel', serif; */
+  /* font-family: 'Josefin Sans', sans-serif; */
+  font-size: 30px;
+}
+
+.about-section .nav-box:hover {
+  background-color: #E8EDDF;
+  color: #242423;
 }
 
 .about-section .social-icons-container > a {
-    color: black;
     text-decoration: none;
     height: 50px;
     width: 50px;
@@ -131,6 +196,7 @@ img.piedmont-andrew {
     font-size: 36px;
     cursor: pointer;
     transition: all .1s ease-in-out;
+    color: #F5CB5C;
 }
 
 .about-section .social-icons-container i:hover {
