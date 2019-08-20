@@ -72,11 +72,11 @@ html, body, #root {
       -ms-animation-fill-mode: forwards;
        -o-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: 1s;
-     -moz-animation-delay: 1s;
-      -ms-animation-delay: 1s;
-       -o-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: .6s;
+     -moz-animation-delay: .6s;
+      -ms-animation-delay: .6s;
+       -o-animation-delay: .6s;
+          animation-delay: .6s;
 }
 
 .fade-in {
@@ -85,26 +85,6 @@ html, body, #root {
       -ms-animation: fadein 2s; /* Internet Explorer */
        -o-animation: fadein 2s; /* Opera < 12.1 */
           animation: fadein 2s;
-}
-
-.nav {
-    /* color: #495057; */
-    color: black
-    height: 90px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 30px;
-    /* position: fixed; */
-    background-color: white;
-
-        margin-top: 10px;
-        font-size: 21px;
-        text-align: center;
-
-        -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-           -moz-animation: fadein 2s; /* Firefox < 16 */
-            -ms-animation: fadein 2s; /* Internet Explorer */
-             -o-animation: fadein 2s; /* Opera < 12.1 */
-                animation: fadein 2s;
 }
 
 .nav > div:first-child {
@@ -133,15 +113,10 @@ html, body, #root {
     overflow: auto;
 }
 
-.about-section {
-    height: 800px;
+.section {
+    height: 100vh;
     font-family: 'Proza Libre', sans-serif;
     color: #E8EDDF;
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
 }
 
 img.piedmont-andrew {
@@ -152,18 +127,18 @@ img.piedmont-andrew {
   margin-top: 50px;
 }
 
-.about-section h1{
+#about-section h1{
   z-index: 2;
   font-family: 'Amatic SC';
   font-size: 175px;
 }
 
-.about-section p {
+#about-section p {
   font-family: 'Josefin Sans', sans-serif;
   color: #F5CB5C;
 }
 
-.about-section .nav-box {
+#about-section .nav-box {
   height: 75px;
   width: 150px;
   border: 1px solid #F5CB5C;
@@ -180,123 +155,134 @@ img.piedmont-andrew {
   font-size: 30px;
 }
 
-.about-section .nav-box:hover {
+#about-section .nav-box:hover {
   background-color: #E8EDDF;
   color: #242423;
 }
 
-.about-section .social-icons-container > a {
+#about-section .social-icons-container > a {
     text-decoration: none;
     height: 50px;
     width: 50px;
     display: inline;
+    padding-top: 15px;
+    border-top: 1px solid #E8EDDF;
 }
 
-.about-section .social-icons-container i {
+#about-section .social-icons-container i {
     font-size: 36px;
     cursor: pointer;
     transition: all .1s ease-in-out;
     color: #F5CB5C;
 }
 
-.about-section .social-icons-container i:hover {
+#about-section .social-icons-container i:hover {
     font-size: 40px;
 }
 
-.portfolio-section {
-    height: 700px;
-    font-family: 'Proza Libre', sans-serif;
-
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
+#portfolio-section {
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
-.portfolio-section .card {
-    border: none;
-    border-radius: 0;
-    height: 300px;
-    max-width: 300px;
-    text-decoration: none;
-    color: black;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+#portfolio-section > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
 }
 
-.portfolio-section .image-layer {
+#portfolio-section .card {
+  border: none;
+  border-radius: 0;
+  width: 300px;
+  height: 515px;
+  text-decoration: none;
+  color: black;
+  background-color: #333533;
+  transition: all .15s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+#portfolio-section .card:hover {
+  width: 320px;
+  height: 535px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+#portfolio-section .image-layer {
     overflow: hidden;
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
     transition: all .15s ease-in-out;
 }
 
-.portfolio-section .card:hover .image-layer {
+#portfolio-section .card:hover .image-layer {
     opacity: .1;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     transition: all .15s ease-in-out;
 }
 
-.portfolio-section img {
-    height: 300px;
-    width: 300px;
+#portfolio-section img {
+    height: 100%;
+    width: 340px;
 }
 
-.portfolio-section .link-layer {
+#portfolio-section .link-layer {
     position: absolute;
     opacity: 0;
     transition: all .15s ease-in-out;
+    color: #E8EDDF;
 }
 
-.portfolio-section .card:hover .link-layer {
+#portfolio-section .card:hover .link-layer {
     opacity: 1;
 }
 
-.portfolio-section .link-layer p {
-    text-align: center;
-    margin: 0;
+#portfolio-section .link-layer p {
+  text-align: center;
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-.portfolio-section .icon-wrapper {
-    min-height: 56px;
+#portfolio-section .link-layer h1 {
+  font-size: 50px;
+  font-family: 'Amatic SC', cursive;
 }
 
-.portfolio-section a, .portfolio-section a:hover {
+#portfolio-section .icon-wrapper {
+  min-height: 56px;
+}
+
+#portfolio-section a, #portfolio-section a:hover {
     text-decoration: none;
     color: black;
 }
 
-.portfolio-section i {
+#portfolio-section i {
     cursor: pointer;
     font-size: 50px;
+    color: #F5CB5C;
     transition: all .1s ease-in-out;
 }
 
-.portfolio-section i:hover {
+#portfolio-section i:hover {
     font-size: 56px;
 }
 
-.portfolio-section .stack-icon {
+#portfolio-section .stack-icon {
     height: 50px;
     width: 50px;
 }
 
-.portfolio-section .stack-icon.wide {
+#portfolio-section .stack-icon.wide {
     height: 50px;
     width: 150px;
 }
 
-.blog-section {
-    height: 700px;
-    font-family: 'Proza Libre', sans-serif;
-
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
+#stack-section {
 }
 
 
