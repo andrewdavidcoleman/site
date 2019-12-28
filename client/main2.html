@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html class="" lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Proza+Libre&display|Khand|Patrick+Hand+SC&display=swap=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Beth+Ellen|Cinzel|Josefin+Sans|Khand|Patrick+Hand+SC|Shadows+Into+Light&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style2.css" />
+
+        <title>Andrew Coleman</title>
+    </head>
+    <body class="container-fluid">
+        <div class="row main">
+            <div class="col">
+                <img class="andrew-laptop" src="images/andrew_laptop_square.jpg" alt="Andrew with laptop">
+                <div class="row section p-5" id="about-section">
+                  <div class="col-9 d-flex flex-column">
+                      <div class="row flex-fill align-items-end justify-content-beginning">
+                        <h1 class="fade-down-in-4">Andrew Coleman</h1>
+                      </div>
+                      <div class="row align-items-beginning justify-content-beginning">
+                        <div class="col">
+                          <p class="fade-down-in-3">Full Stack Web Developer | Entrepreneur | Learner</p>
+                        </div>
+                      </div>
+                      <div class="row flex-fill align-items-center">
+                          <div class="col d-flex flex-column align-items-beginning justify-content-center fade-down-in-1">
+                            <div class="nav-box d-flex align-items-center justify-content-center" onclick="scrollToPortfolio()">portfolio</div>
+                          </div>
+                          <div class="col d-flex flex-column align-items-beginning justify-content-center fade-down-in-2">
+                            <div class="nav-box d-flex align-items-center justify-content-center" onclick="scrollToStory()">story</div>
+                          </div>
+                          <div class="col d-flex flex-column align-items-beginning justify-content-center fade-down-in-3">
+                            <div class="nav-box d-flex align-items-center justify-content-center" onclick="scrollToContact()">contact</div>
+                          </div>
+                          <div class="col">
+                          </div>
+                      </div>
+                      <div class="row flex-fill m-0 social-icons-container">
+                          <a class="d-flex align-items-center justify-content-center" target="_blank" href="https://www.linkedin.com/in/andrewdavidcoleman/">
+                              <i class="fab fa-linkedin-in"></i>
+                          </a>
+                          <a class="d-flex align-items-center justify-content-center" target="_blank" href="https://github.com/andrewdavidcoleman">
+                              <i class="fab fa-github"></i>
+                          </a>
+                          <a class="d-flex align-items-center justify-content-center" target="_blank" href="https://www.instagram.com/andrewdavidcoleman/">
+                              <i class="fab fa-instagram"></i>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-3">
+
+                  </div>
+                </div>
+                <div class="row section" id="portfolio-section">
+                    <div class="col">
+                        <div class="card d-flex">
+                            <div class="flex-fill image-layer d-flex align-items-center justify-content-center">
+                                <img src="images/beer-tall.jpg" alt="">
+                            </div>
+                            <div class="col flex-fill link-layer h-100 w-100 d-flex flex-column">
+                                <div class="row flex-fill mt-3">
+                                    <div class="col-2">
+
+                                    </div>
+                                    <div class="col-4 d-flex align-items-center justify-content-center">
+                                        <div class="icon-wrapper d-flex align-items-center justify-content-center">
+                                            <a href="" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex align-items-center justify-content-center">
+                                        <div class="icon-wrapper d-flex align-items-center justify-content-center">
+                                            <a href="https://github.com/andrewdavidcoleman/beerme" target="_blank">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+
+                                    </div>
+                                </div>
+                                <div class="row flex-fill d-flex justify-content-center">
+                                    <div class="col d-flex flex-column align-items-center justify-content-center">
+                                        <h1>Beer Me</h1>
+                                        <p>
+                                            A helpful application for the home brewmaster. Look up ingredient lists and recipes for home beer brewing.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row flex-fill d-flex justify-content-center mb-2">
+                                    <div class="col d-flex align-items-center justify-content-center">
+                                        <img class="stack-icon" src="images/react.png" alt="react">
+                                    </div>
+                                    <!-- <div class="col">
+                                        <img class="stack-icon" src="images/javascript.png" alt="javascript">
+                                    </div> -->
+                                    <div class="col d-flex align-items-center justify-content-center">
+                                        <img class="stack-icon wide" src="images/htmlcssjs.jpg" alt="htmlcssjs">
+                                    </div>
+                                    <!-- <div class="col">
+                                        <img class="stack-icon wide" src="images/css3.png" alt="css3">
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card d-flex">
+                            <div class="flex-fill image-layer d-flex align-items-center justify-content-center">
+                                <img src="images/tree.jpg" alt="">
+                            </div>
+                            <div class="col flex-fill link-layer h-100 w-100 d-flex flex-column">
+                                <div class="row flex-fill mt-3">
+                                    <div class="col-2">
+
+                                    </div>
+                                    <div class="col-4 d-flex align-items-center justify-content-center">
+                                        <div class="icon-wrapper d-flex align-items-center justify-content-center">
+                                            <a href="https://shrouded-island-27616.herokuapp.com" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex align-items-center justify-content-center">
+                                        <div class="icon-wrapper d-flex align-items-center justify-content-center">
+                                            <a href="https://github.com/andrewdavidcoleman/beermeAPI" target="_blank">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+
+                                    </div>
+                                </div>
+                                <div class="row flex-fill d-flex justify-content-center">
+                                    <div class="col d-flex flex-column align-items-center justify-content-center">
+                                      <h1>Beer Me API</h1>
+                                      <p>
+                                          Web API for the Beer Me application.
+                                      </p>
+                                    </div>
+                                </div>
+                                <div class="row flex-fill d-flex justify-content-center mb-2">
+                                    <div class="col d-flex align-items-center justify-content-center">
+                                        <img class="stack-icon" src="images/csharp.png" alt="c sharp">
+                                    </div>
+                                    <!-- <div class="col">
+                                        <img class="stack-icon" src="images/javascript.png" alt="javascript">
+                                    </div> -->
+                                    <div class="col d-flex align-items-center justify-content-center">
+                                        <img class="stack-icon medium" src="images/dotnetcore.png" alt="dotnet core">
+                                    </div>
+                                    <!-- <div class="col">
+                                        <img class="stack-icon wide" src="images/css3.png" alt="css3">
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card d-flex">
+                            <div class="flex-fill image-layer d-flex align-items-center justify-content-center">
+                                <img src="images/beer-tall.jpg" alt="">
+                            </div>
+                            <div class="col flex-fill link-layer h-100 w-100 d-flex flex-column">
+                                <div class="row flex-fill mt-3">
+                                    <div class="col-2">
+
+                                    </div>
+                                    <div class="col-4 d-flex align-items-center justify-content-center">
+                                        <div class="icon-wrapper d-flex align-items-center justify-content-center">
+                                            <a href="/beer" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex align-items-center justify-content-center">
+                                        <div class="icon-wrapper d-flex align-items-center justify-content-center">
+                                            <a href="/beer" target="_blank">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+
+                                    </div>
+                                </div>
+                                <div class="row flex-fill d-flex justify-content-center">
+                                    <div class="col d-flex align-items-center justify-content-center">
+                                        <p>
+                                            A helpful application for the home brewmaster. Look up ingredient lists and recipes for home beer brewing.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row flex-fill d-flex justify-content-center mb-2">
+                                    <div class="col d-flex align-items-center justify-content-center">
+                                        <img class="stack-icon" src="images/react.png" alt="react">
+                                    </div>
+                                    <!-- <div class="col">
+                                        <img class="stack-icon" src="images/javascript.png" alt="javascript">
+                                    </div> -->
+                                    <div class="col d-flex align-items-center justify-content-center">
+                                        <img class="stack-icon wide" src="images/htmlcssjs.jpg" alt="htmlcssjs">
+                                    </div>
+                                    <!-- <div class="col">
+                                        <img class="stack-icon wide" src="images/css3.png" alt="css3">
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card d-flex">
+                            <div class="flex-fill image-layer d-flex align-items-center justify-content-center">
+                                <img src="images/beer-tall.jpg" alt="">
+                            </div>
+                            <div class="col flex-fill link-layer h-100 w-100 d-flex flex-column">
+                                <div class="row flex-fill mt-3">
+                                    <div class="col-2">
+
+                                    </div>
+                                    <div class="col-4 d-flex align-items-center justify-content-center">
+                                        <div class="icon-wrapper d-flex align-items-center justify-content-center">
+                                            <a href="/beer" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex align-items-center justify-content-center">
+                                        <div class="icon-wrapper d-flex align-items-center justify-content-center">
+                                            <a href="/beer" target="_blank">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+
+                                    </div>
+                                </div>
+                                <div class="row flex-fill d-flex justify-content-center">
+                                    <div class="col d-flex align-items-center justify-content-center">
+                                        <p>
+                                            A helpful application for the home brewmaster. Look up ingredient lists and recipes for home beer brewing.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row flex-fill d-flex justify-content-center mb-2">
+                                    <div class="col d-flex align-items-center justify-content-center">
+                                        <img class="stack-icon" src="images/react.png" alt="react">
+                                    </div>
+                                    <!-- <div class="col">
+                                        <img class="stack-icon" src="images/javascript.png" alt="javascript">
+                                    </div> -->
+                                    <div class="col d-flex align-items-center justify-content-center">
+                                        <img class="stack-icon wide" src="images/htmlcssjs.jpg" alt="htmlcssjs">
+                                    </div>
+                                    <!-- <div class="col">
+                                        <img class="stack-icon wide" src="images/css3.png" alt="css3">
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card d-flex">
+                            <div class="flex-fill image-layer d-flex align-items-center justify-content-center">
+                                <img src="images/beer-tall.jpg" alt="">
+                            </div>
+                            <div class="col flex-fill link-layer h-100 w-100 d-flex flex-column">
+                                <div class="row flex-fill mt-3">
+                                    <div class="col-2">
+
+                                    </div>
+                                    <div class="col-4 d-flex align-items-center justify-content-center">
+                                        <div class="icon-wrapper d-flex align-items-center justify-content-center">
+                                            <a href="/beer" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex align-items-center justify-content-center">
+                                        <div class="icon-wrapper d-flex align-items-center justify-content-center">
+                                            <a href="/beer" target="_blank">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+
+                                    </div>
+                                </div>
+                                <div class="row flex-fill d-flex justify-content-center">
+                                    <div class="col d-flex align-items-center justify-content-center">
+                                        <p>
+                                            A helpful application for the home brewmaster. Look up ingredient lists and recipes for home beer brewing.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row flex-fill d-flex justify-content-center mb-2">
+                                    <div class="col d-flex align-items-center justify-content-center">
+                                        <img class="stack-icon" src="images/react.png" alt="react">
+                                    </div>
+                                    <!-- <div class="col">
+                                        <img class="stack-icon" src="images/javascript.png" alt="javascript">
+                                    </div> -->
+                                    <div class="col d-flex align-items-center justify-content-center">
+                                        <img class="stack-icon wide" src="images/htmlcssjs.jpg" alt="htmlcssjs">
+                                    </div>
+                                    <!-- <div class="col">
+                                        <img class="stack-icon wide" src="images/css3.png" alt="css3">
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card d-flex">
+                            <div class="flex-fill image-layer d-flex align-items-center justify-content-center">
+                                <img src="images/beer-tall.jpg" alt="">
+                            </div>
+                            <div class="col flex-fill link-layer h-100 w-100 d-flex flex-column">
+                                <div class="row flex-fill mt-3">
+                                    <div class="col-2">
+
+                                    </div>
+                                    <div class="col-4 d-flex align-items-center justify-content-center">
+                                        <div class="icon-wrapper d-flex align-items-center justify-content-center">
+                                            <a href="/beer" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex align-items-center justify-content-center">
+                                        <div class="icon-wrapper d-flex align-items-center justify-content-center">
+                                            <a href="/beer" target="_blank">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+
+                                    </div>
+                                </div>
+                                <div class="row flex-fill d-flex justify-content-center">
+                                    <div class="col d-flex align-items-center justify-content-center">
+                                        <p>
+                                            A helpful application for the home brewmaster. Look up ingredient lists and recipes for home beer brewing.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row flex-fill d-flex justify-content-center mb-2">
+                                    <div class="col d-flex align-items-center justify-content-center">
+                                        <img class="stack-icon" src="images/react.png" alt="react">
+                                    </div>
+                                    <!-- <div class="col">
+                                        <img class="stack-icon" src="images/javascript.png" alt="javascript">
+                                    </div> -->
+                                    <div class="col d-flex align-items-center justify-content-center">
+                                        <img class="stack-icon wide" src="images/htmlcssjs.jpg" alt="htmlcssjs">
+                                    </div>
+                                    <!-- <div class="col">
+                                        <img class="stack-icon wide" src="images/css3.png" alt="css3">
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row section" id="story-section">
+                    story
+                </div>
+                <div class="row section" id="contact-section">
+                    <div class="col left ml-4">
+
+                    </div>
+                    <div class="col right align-self-center mr-4">
+                      <form class="" action="" method="post">
+                        <input type="text" name="name" value="" placeholder="Your name">
+                        <input type="text" name="email" value="" placeholder="Your email">
+                        <textarea name="message" value="">
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+
+          function scrollToPortfolio(){
+            document.getElementById('portfolio-section').scrollIntoView({ block: 'center',  behavior: 'smooth' });
+          }
+
+          function scrollToStory(){
+            document.getElementById('story-section').scrollIntoView({ block: 'center',  behavior: 'smooth' });
+          }
+
+          function scrollToContact(){
+            document.getElementById('contact-section').scrollIntoView({ block: 'center',  behavior: 'smooth' });
+          }
+
+        </script>
+    </body>
+</html>

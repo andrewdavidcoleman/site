@@ -7,14 +7,10 @@ const path = require("path");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/client'));
 
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "/public/main2.html"));
-});
-
-app.get("/beer", function(req, res) {
-  res.sendFile(path.join(__dirname, "/public/beer.html"));
+  res.sendFile(path.join(__dirname, "/client/main2.html"));
 });
 
 app.listen(PORT, function() {
