@@ -1,0 +1,338 @@
+
+$base:   #05386b;
+$base2:  #379683;
+$accent: #5cdb95;
+$text-1: #edf5e1;
+$primary-font:   'Amatic SC', cursive;
+$secondary-font: 'Josefin Sans', sans-serif;
+
+html, body, #root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $base;
+  color: $text-1;
+}
+
+.animation-delay {
+  animation-delay: 1s;
+}
+
+%fade-down-in {
+-webkit-animation: fadedown .75s, fadein .75s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadedown .75s, fadein .75s; /* Firefox < 16 */
+    -ms-animation: fadedown .75s, fadein .75s; /* Internet Explorer */
+     -o-animation: fadedown .75s, fadein .75s; /* Opera < 12.1 */
+        animation: fadedown .75s, fadein .75s;
+}
+
+%animation-fill-mode-forwards {
+-webkit-animation-fill-mode: forwards;
+   -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+     -o-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+}
+
+@mixin animation-delay($prop) {
+-webkit-animation-delay: $prop;
+   -moz-animation-delay: $prop;
+    -ms-animation-delay: $prop;
+     -o-animation-delay: $prop;
+        animation-delay: $prop;
+}
+
+.fade-down-in-1 {
+  position: relative;
+  @extend %fade-down-in;
+}
+
+.fade-down-in-2 {
+  opacity: 0;
+  @extend .fade-down-in-1;
+  @extend %animation-fill-mode-forwards;
+  @include animation-delay(.2s);
+}
+
+.fade-down-in-3 {
+  opacity: 0;
+  position: relative;
+  @extend %fade-down-in;
+  @extend %animation-fill-mode-forwards;
+  @include animation-delay(.4s);
+}
+
+.fade-down-in-4 {
+  opacity: 0;
+  position: relative;
+  @extend %fade-down-in;
+  @extend %animation-fill-mode-forwards;
+  @include animation-delay(.6s);
+}
+
+.fade-in {
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 2s; /* Firefox < 16 */
+      -ms-animation: fadein 2s; /* Internet Explorer */
+       -o-animation: fadein 2s; /* Opera < 12.1 */
+          animation: fadein 2s;
+}
+
+.main {
+    overflow: auto;
+}
+
+.section {
+    height: 100vh;
+    font-family: 'Proza Libre', sans-serif;
+    color: $text-1;
+}
+
+img.andrew-laptop {
+  height: 120vh;
+  position: absolute;
+  opacity: .4;
+  right: 0;
+  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+  mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+#about-section {
+  h1{
+    z-index: 2;
+    font-family: 'Amatic SC';
+    font-size: 175px;
+  }
+
+  p {
+    font-family: $secondary-font;
+    color: $accent;
+  }
+
+  .nav-box {
+    height: 75px;
+    width: 150px;
+    border: 1px solid $accent;
+    /* font-family: 'Raleway', sans-serif; */
+    transition: all .15s ease-in-out;
+    cursor: pointer;
+    /* font-family: 'Patrick Hand SC', cursive; */
+    /* font-family: 'Khand', sans-serif; */
+    /* font-family: 'Shadows Into Light', cursive; */
+    font-family: $primary-font;
+    /* font-family: 'Beth Ellen', cursive; */
+    /* font-family: 'Cinzel', serif; */
+    /* font-family: $secondary-font; */
+    font-size: 30px;
+  }
+
+  .nav-box:hover {
+    background-color: $text-1;
+    color: $base;
+  }
+
+  .social-icons-container > a {
+    text-decoration: none;
+    height: 50px;
+    width: 50px;
+    display: inline;
+    padding-top: 15px;
+    border-top: 1px solid $text-1;
+  }
+
+  .social-icons-container i {
+    font-size: 36px;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    color: $accent;
+  }
+
+  .social-icons-container i:hover {
+    font-size: 40px;
+  }
+}
+
+#portfolio-section {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+  }
+
+  .card {
+    border: none;
+    border-radius: 0;
+    width: 300px;
+    height: 515px;
+    text-decoration: none;
+    color: black;
+    background-color: #333533;
+    transition: all .15s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    &:hover {
+      width: 320px;
+      height: 535px;
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+      .image-layer {
+        opacity: .1;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        transition: all .15s ease-in-out;
+      }
+      .link-layer {
+          opacity: 1;
+      }
+    }
+  }
+
+  .image-layer {
+      overflow: hidden;
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+      transition: all .15s ease-in-out;
+  }
+
+  img {
+      height: 100%;
+      width: 340px;
+  }
+
+  .link-layer {
+      position: absolute;
+      opacity: 0;
+      transition: all .15s ease-in-out;
+      color: $text-1;
+  }
+
+  .link-layer p {
+    text-align: center;
+    margin: 0;
+    font-family: $secondary-font;
+  }
+
+  .link-layer h1 {
+    font-size: 50px;
+    font-family: $primary-font;
+  }
+
+  .icon-wrapper {
+    min-height: 56px;
+  }
+
+  a, a:hover {
+      text-decoration: none;
+      color: black;
+  }
+
+  i {
+      cursor: pointer;
+      font-size: 50px;
+      color: $accent;
+      transition: all .1s ease-in-out;
+  }
+
+  i:hover {
+      font-size: 56px;
+  }
+
+  .stack-icon {
+      height: 50px;
+      width: 50px;
+      &.wide {
+          height: 50px;
+          width: 150px;
+      }
+      &.medium {
+        height: 50px;
+        width: 100px;
+      }
+  }
+}
+
+#contact-section {
+  .left {
+    height: 90%;
+  }
+  .right {
+    background-color: $base2;
+    height: 90%;
+    width: 90%;
+    padding: 30px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  input, textarea {
+    background-color: $base2;
+    border: 1px solid $accent;
+    transition: all .15s ease-in-out;
+    font-family: $primary-font;
+    font-size: 30px;
+    padding: 20px;
+    margin: 10px;
+    color: $text-1;
+    &:focus {
+      outline: none;
+    }
+    &::-webkit-input-placeholder { /* Edge */
+      opacity: .5;
+      color: $text-1
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      opacity: .5;
+      color: $text-1
+    }
+    &::placeholder {
+      opacity: .5;
+      color: $text-1
+    }
+  }
+}
+
+
+/* ANIMATIONS */
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-moz-keyframes fadein {/* Firefox < 16 */
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {/* Safari, Chrome and Opera > 12.1 */
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-ms-keyframes fadein {/* Internet Explorer */
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-o-keyframes fadein {/* Opera < 12.1 */
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/*===================*/
+@keyframes fadedown {
+  from { top: -100px; }
+  to   { top: 0px; }
+}
+@-moz-keyframes fadedown {/* Firefox < 16 */
+  from { top: -100px; }
+  to   { top: 0px; }
+}
+@-webkit-keyframes fadedown {/* Safari, Chrome and Opera > 12.1 */
+  from { top: -100px; }
+  to   { top: 0px; }
+}
+@-ms-keyframes fadedown {/* Internet Explorer */
+  from { top: -100px; }
+  to   { top: 0px; }
+}
+@-o-keyframes fadedown {/* Opera < 12.1 */
+  from { top: -100px; }
+  to   { top: 0px; }
+}

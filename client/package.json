@@ -11,5 +11,9 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   }
 }
