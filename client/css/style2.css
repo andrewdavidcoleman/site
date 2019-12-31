@@ -85,11 +85,21 @@ html, body, #root {
   color: #edf5e1;
 }
 
-img.andrew-laptop {
+img.background-image {
   height: 120vh;
   position: absolute;
   opacity: 0.4;
+}
+img.background-image.andrew-laptop {
   right: 0;
+  -webkit-mask-image: linear-gradient(to left, black, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(to left, black, rgba(0, 0, 0, 0));
+}
+img.background-image.laptop-hands {
+  left: 0;
+  bottom: 0;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
   -webkit-mask-image: linear-gradient(to left, black, rgba(0, 0, 0, 0));
   mask-image: linear-gradient(to left, black, rgba(0, 0, 0, 0));
 }
@@ -158,7 +168,7 @@ img.andrew-laptop {
   height: 515px;
   text-decoration: none;
   color: black;
-  background-color: #333533;
+  background-color: #05386b;
   transition: all 0.15s ease-in-out;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -169,9 +179,10 @@ img.andrew-laptop {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 #portfolio-section .card:hover .image-layer {
-  opacity: 0.1;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+  opacity: 0.2;
+  -webkit-filter: blur(5px);
+  /* Safari */
+  filter: blur(5px);
   transition: all 0.15s ease-in-out;
 }
 #portfolio-section .card:hover .link-layer {
@@ -179,8 +190,6 @@ img.andrew-laptop {
 }
 #portfolio-section .image-layer {
   overflow: hidden;
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
   transition: all 0.15s ease-in-out;
 }
 #portfolio-section img {
@@ -235,14 +244,13 @@ img.andrew-laptop {
   height: 90%;
 }
 #contact-section .right {
-  background-color: #379683;
   height: 90%;
   width: 90%;
   padding: 30px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 #contact-section input, #contact-section textarea {
-  background-color: #379683;
+  background-color: transparent;
   border: 1px solid #5cdb95;
   transition: all 0.15s ease-in-out;
   font-family: "Amatic SC", cursive;
@@ -267,6 +275,16 @@ img.andrew-laptop {
 #contact-section input::placeholder, #contact-section textarea::placeholder {
   opacity: 0.5;
   color: #edf5e1;
+}
+#contact-section input:-webkit-autofill, #contact-section textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 500px rgba(255, 255, 255, 0.5) inset;
+  /* Change the color to your own background color */
+  -webkit-text-fill-color: #edf5e1;
+}
+#contact-section input:-webkit-autofill:focus, #contact-section textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.5) inset;
+  /*your box-shadow*/
+  -webkit-text-fill-color: #edf5e1;
 }
 
 /* ANIMATIONS */

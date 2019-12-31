@@ -18,7 +18,7 @@
     <body class="container-fluid">
         <div class="row main">
             <div class="col">
-                <img class="andrew-laptop" src="images/andrew_laptop_square.jpg" alt="Andrew with laptop">
+                <img class="andrew-laptop background-image" src="images/andrew_laptop_square.jpg" alt="Andrew with laptop">
                 <div class="row section p-5" id="about-section">
                   <div class="col-9 d-flex flex-column">
                       <div class="row flex-fill align-items-end justify-content-beginning">
@@ -377,19 +377,21 @@
                 <div class="row section" id="story-section">
                     story
                 </div>
+                <img class="laptop-hands background-image" src="images/laptop_hands.jpg" alt="Typing on laptop">
                 <div class="row section" id="contact-section">
                     <div class="col left ml-4">
 
                     </div>
-                    <form class="col right align-self-center mr-4 d-flex flex-column" action="" method="post">
+                    <div class="background-opaque"></div>
+                    <form class="col right align-self-center mr-4 d-flex flex-column" autocomplete="off" action="" method="post">
                       <div class="row">
-                        <input class="flex-fill" type="text" name="name" value="" placeholder="Your name">
+                        <input class="flex-fill" type="text" name="name" value="" autocomplete="nope" placeholder="Your name">
                       </div>
                       <div class="row">
-                        <input class="flex-fill" type="text" name="email" value="" placeholder="Your email">
+                        <input class="flex-fill" type="text" name="mailto" value="" autocomplete="nope" placeholder="Your email">
                       </div>
                       <div class="row flex-fill">
-                        <textarea class="flex-fill" name="message" value="" placeholder="Message..."></textarea>
+                        <textarea class="flex-fill" name="message" value="" autocomplete="nope" placeholder="Message..."></textarea>
                       </div>
                     </form>
                 </div>

@@ -6,6 +6,12 @@ $text-1: #edf5e1;
 $primary-font:   'Amatic SC', cursive;
 $secondary-font: 'Josefin Sans', sans-serif;
 
+// $base:   #272727;
+// $base2:  #747474;
+// $accent: #ff652f;
+// $text-1: #ffe400;
+// $text-2: #ffe400;
+
 html, body, #root {
   height: 100%;
   display: flex;
@@ -88,13 +94,25 @@ html, body, #root {
     color: $text-1;
 }
 
-img.andrew-laptop {
+img.background-image {
   height: 120vh;
   position: absolute;
   opacity: .4;
-  right: 0;
-  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
-  mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+
+  &.andrew-laptop {
+    right: 0;
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+    mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+  }
+
+  &.laptop-hands {
+    left: 0;
+    bottom: 0;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+    mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+  }
 }
 
 #about-section {
@@ -170,7 +188,7 @@ img.andrew-laptop {
     height: 515px;
     text-decoration: none;
     color: black;
-    background-color: #333533;
+    background-color: $base;
     transition: all .15s ease-in-out;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -179,9 +197,9 @@ img.andrew-laptop {
       height: 535px;
       box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
       .image-layer {
-        opacity: .1;
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
+        opacity: .2;
+        -webkit-filter: blur(5px); /* Safari */
+        filter: blur(5px);
         transition: all .15s ease-in-out;
       }
       .link-layer {
@@ -191,10 +209,10 @@ img.andrew-laptop {
   }
 
   .image-layer {
-      overflow: hidden;
-      -webkit-filter: grayscale(0%);
-      filter: grayscale(0%);
-      transition: all .15s ease-in-out;
+    overflow: hidden;
+    // -webkit-filter: grayscale(0%);
+    // filter: grayscale(0%);
+    transition: all .15s ease-in-out;
   }
 
   img {
@@ -259,14 +277,14 @@ img.andrew-laptop {
     height: 90%;
   }
   .right {
-    background-color: $base2;
+    // background-color: $base2;
     height: 90%;
     width: 90%;
     padding: 30px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   }
   input, textarea {
-    background-color: $base2;
+    background-color: transparent;
     border: 1px solid $accent;
     transition: all .15s ease-in-out;
     font-family: $primary-font;
@@ -288,6 +306,15 @@ img.andrew-laptop {
     &::placeholder {
       opacity: .5;
       color: $text-1
+    }
+    &:-webkit-autofill {
+      -webkit-box-shadow:0 0 0 500px rgba(255,255,255,0.5) inset; /* Change the color to your own background color */
+      -webkit-text-fill-color: $text-1;
+    }
+
+    &:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0 500px rgba(0,0,0,0.5) inset;/*your box-shadow*/
+      -webkit-text-fill-color: $text-1;
     }
   }
 }
