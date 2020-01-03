@@ -246,32 +246,23 @@ img.background-image {
   }
 
   a, a:hover {
-      text-decoration: none;
-      color: black;
+    text-decoration: none;
+    color: black;
   }
 
   i {
+    font-size: 50px;
+    color: $accent;
+    &.link {
       cursor: pointer;
-      font-size: 50px;
-      color: $accent;
       transition: all .1s ease-in-out;
-  }
-
-  i:hover {
-      font-size: 56px;
-  }
-
-  .stack-icon {
-      height: 50px;
-      width: 50px;
-      &.wide {
-          height: 50px;
-          width: 150px;
+      &:hover {
+        font-size: 56px;
       }
-      &.medium {
-        height: 50px;
-        width: 100px;
-      }
+    }
+    &.stack-icon {
+      padding: 0 15px;
+    }
   }
 }
 

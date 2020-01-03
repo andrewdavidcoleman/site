@@ -224,25 +224,18 @@ img.background-image.laptop-hands {
   color: black;
 }
 #portfolio-section i {
-  cursor: pointer;
   font-size: 50px;
   color: #5cdb95;
+}
+#portfolio-section i.link {
+  cursor: pointer;
   transition: all 0.1s ease-in-out;
 }
-#portfolio-section i:hover {
+#portfolio-section i.link:hover {
   font-size: 56px;
 }
-#portfolio-section .stack-icon {
-  height: 50px;
-  width: 50px;
-}
-#portfolio-section .stack-icon.wide {
-  height: 50px;
-  width: 150px;
-}
-#portfolio-section .stack-icon.medium {
-  height: 50px;
-  width: 100px;
+#portfolio-section i.stack-icon {
+  padding: 0 15px;
 }
 
 #contact-section .left {
