@@ -2,6 +2,7 @@
 $base:   #05386b;
 $base2:  #379683;
 $accent: #5cdb95;
+$accent-filter: invert(83%) sepia(15%) saturate(909%) hue-rotate(86deg) brightness(89%) contrast(93%);
 $text-1: #edf5e1;
 $primary-font:   'Amatic SC', cursive;
 $secondary-font: 'Josefin Sans', sans-serif;
@@ -263,6 +264,11 @@ img.background-image {
     &.stack-icon {
       padding: 0 15px;
     }
+  }
+
+  img.fake-icon {
+    height: 40px;
+    filter: $accent-filter;
   }
 }
 

@@ -237,6 +237,10 @@ img.background-image.laptop-hands {
 #portfolio-section i.stack-icon {
   padding: 0 15px;
 }
+#portfolio-section img.fake-icon {
+  height: 40px;
+  filter: invert(83%) sepia(15%) saturate(909%) hue-rotate(86deg) brightness(89%) contrast(93%);
+}
 
 #contact-section .left {
   height: 90%;
