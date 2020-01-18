@@ -17,7 +17,7 @@ html, body, #root {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: $base;
+  background-color: $base !important; //!important is to override bootstrap default background-color;
   color: $text-1;
 }
 
