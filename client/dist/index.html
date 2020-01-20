@@ -2,18 +2,20 @@
 <html class="" lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"> -->
-        
         <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Beth+Ellen|Cinzel|Josefin+Sans|Khand|Patrick+Hand+SC|Shadows+Into+Light&display=swap|Cormorant+Garamond|Proza+Libre&display|Khand|Patrick+Hand+SC&display=swap=swap" rel="stylesheet">
 
+        <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
         <link rel="stylesheet" type="text/css" href="css/style2.css" />
 
         <title>Andrew Coleman</title>
     </head>
     <body class="container-fluid">
-        <div class="row main">
+        <div id="main" class="row">
             <div class="col">
+                <div id="scrollMenu" class="">
+                  TEST
+                </div>
                 <img class="andrew-laptop background-image" src="images/andrew_laptop_square.jpg" alt="Andrew with laptop">
                 <div class="row section p-5" id="about-section">
                   <div class="col-9 d-flex flex-column">
@@ -27,13 +29,13 @@
                       </div>
                       <div class="row flex-fill align-items-center">
                           <div class="col d-flex flex-column align-items-beginning justify-content-center fade-down-in-1">
-                            <div class="nav-box d-flex align-items-center justify-content-center" onclick="scrollToPortfolio()">portfolio</div>
+                            <div class="nav-box d-flex align-items-center justify-content-center theme-border" onclick="scrollToPortfolio()">portfolio</div>
                           </div>
                           <div class="col d-flex flex-column align-items-beginning justify-content-center fade-down-in-2">
-                            <div class="nav-box d-flex align-items-center justify-content-center" onclick="scrollToStory()">story</div>
+                            <div class="nav-box d-flex align-items-center justify-content-center theme-border" onclick="scrollToStory()">story</div>
                           </div>
                           <div class="col d-flex flex-column align-items-beginning justify-content-center fade-down-in-3">
-                            <div class="nav-box d-flex align-items-center justify-content-center" onclick="scrollToContact()">contact</div>
+                            <div class="nav-box d-flex align-items-center justify-content-center theme-border" onclick="scrollToContact()">contact</div>
                           </div>
                           <div class="col">
                           </div>
@@ -57,7 +59,7 @@
                 <div class="row section" id="portfolio-section">
                   <div class="col">
                       <div class="card d-flex">
-                          <div class="flex-fill image-layer d-flex flex-column align-items-center justify-content-center">
+                          <div class="flex-fill image-layer theme-border d-flex flex-column align-items-center justify-content-center">
                               <h1>andrew</h1>
                               <h1>coleman.dev</h1>
                               <i class="fas fa-male"></i>
@@ -96,7 +98,7 @@
                   </div>
                   <div class="col">
                       <div class="card d-flex">
-                          <div class="flex-fill image-layer d-flex flex-column align-items-center justify-content-center">
+                          <div class="flex-fill image-layer theme-border d-flex flex-column align-items-center justify-content-center">
                               <h1>Beer Me</h1>
                               <i class="fas fa-beer"></i>
                           </div>
@@ -140,7 +142,7 @@
                     </div>
                     <div class="col">
                         <div class="card d-flex">
-                            <div class="flex-fill image-layer d-flex flex-column align-items-center justify-content-center">
+                            <div class="flex-fill image-layer theme-border d-flex flex-column align-items-center justify-content-center">
                                 <h1>Beer Me</h1>
                                 <h1>API</h1>
                                 <i class="fas fa-seedling"></i>
@@ -186,7 +188,7 @@
                     </div>
                     <div class="col">
                         <div class="card d-flex">
-                            <div class="flex-fill image-layer d-flex flex-column align-items-center justify-content-center">
+                            <div class="flex-fill image-layer theme-border d-flex flex-column align-items-center justify-content-center">
                                 <h1>Beer Me</h1>
                                 <h1>API</h1>
                                 <i class="fas fa-seedling"></i>
@@ -230,7 +232,7 @@
                     </div>
                     <div class="col">
                         <div class="card d-flex">
-                            <div class="flex-fill image-layer d-flex flex-column align-items-center justify-content-center">
+                            <div class="flex-fill image-layer theme-border d-flex flex-column align-items-center justify-content-center">
                                 <h1>Beer Me</h1>
                                 <h1>API</h1>
                                 <i class="fas fa-seedling"></i>
@@ -274,7 +276,7 @@
                     </div>
                     <div class="col">
                         <div class="card d-flex">
-                            <div class="flex-fill image-layer d-flex flex-column align-items-center justify-content-center">
+                            <div class="flex-fill image-layer theme-border d-flex flex-column align-items-center justify-content-center">
                                 <h1>Beer Me</h1>
                                 <h1>API</h1>
                                 <i class="fas fa-seedling"></i>
@@ -318,7 +320,7 @@
                     </div>
                     <div class="col">
                         <div class="card d-flex">
-                            <div class="flex-fill image-layer d-flex flex-column align-items-center justify-content-center">
+                            <div class="flex-fill image-layer theme-border d-flex flex-column align-items-center justify-content-center">
                                 <h1>Beer Me</h1>
                                 <h1>API</h1>
                                 <i class="fas fa-seedling"></i>
@@ -362,30 +364,47 @@
                     </div>
                 </div>
                 <div class="row section" id="story-section">
-                    story time
-                </div>
-                <img class="laptop-hands background-image" src="images/laptop_hands.jpg" alt="Typing on laptop">
-                <div class="row section" id="contact-section">
-                    <div class="col left ml-4">
-
+                  <div class="col d-flex">
+                    <div class="row flex-fill theme-border inner">
+                      <div class="col">
+                        <div class="row">
+                          <h1>A little bit about me</h1>
+                          <p>In 2016 I decided it was time for a change. I knew I wanted a different career direction, but had no idea what that direction should be. I started researching. I looked at personality profiles, read job descriptions, talked to some wise friends and mentors, and in 2017 started a 6 month coding boot camp at GA Tech to learn web development. It was one of the most terrifying and exciting things I've ever done. I was trying to break into a highly technical career field in which I had no prior education or experience. It was a risk. Could this really work?
+                            <br>
+                            <br>
+                          In the years to follow I've worked full time as a web-based software developer in Atlanta GA, developing custom software solutions for clients in the medical industry. I'd love to chat about your business goals and project needs, reach out to set up a call or video!</p>
+                        </div>
+                      </div>
                     </div>
-                    <div class="background-opaque"></div>
-                    <form class="col right align-self-center mr-4 d-flex flex-column" autocomplete="off" action="" method="post">
-                      <div class="row">
-                        <input class="flex-fill" type="text" name="name" value="" autocomplete="nope" placeholder="Your name">
+                  </div>
+                </div>
+                <!-- <img class="laptop-hands background-image" src="images/laptop_hands.jpg" alt="Typing on laptop"> -->
+                <div class="row section" id="contact-section">
+                  <div class="col d-flex">
+                    <div class="row flex-fill theme-border inner">
+                      <div class="col d-flex flex-column left justify-content-center align-items-center">
+                        <img src="images/piedmont_andrew.jpg" alt="Andrew">
                       </div>
-                      <div class="row">
-                        <input class="flex-fill" type="text" name="mailto" value="" autocomplete="nope" placeholder="Your email">
-                      </div>
-                      <div class="row flex-fill">
-                        <textarea class="flex-fill" name="message" value="" autocomplete="nope" placeholder="Hi Andrew..."></textarea>
-                      </div>
-                    </form>
+                      <!-- <div class="background-opaque"></div> -->
+                      <form class="col right align-self-center d-flex flex-column" autocomplete="off" action="" method="post">
+                        <div class="row">
+                          <input class="flex-fill theme-border" type="text" name="name" value="" autocomplete="nope" placeholder="Your name">
+                        </div>
+                        <div class="row">
+                          <input class="flex-fill theme-border" type="text" name="mailto" value="" autocomplete="nope" placeholder="Your email">
+                        </div>
+                        <div class="row flex-fill">
+                          <textarea class="flex-fill theme-border" name="message" value="" autocomplete="nope" placeholder="Hi Andrew..."></textarea>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>
 
         <script src="./main.js"></script>
+        <script src="./index.js"></script>
         <script>
 
           function scrollToPortfolio(){

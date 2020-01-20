@@ -85,14 +85,18 @@ html, body, #root {
           animation: fadein 2s;
 }
 
-.main {
-    overflow: auto;
+#main {
+  overflow: auto;
 }
 
 .section {
-    height: 100vh;
-    font-family: 'Proza Libre', sans-serif;
-    color: $text-1;
+  height: 100vh;
+  font-family: 'Proza Libre', sans-serif;
+  color: $text-1;
+}
+
+.theme-border{
+  border: 1px solid $accent;
 }
 
 img.background-image {
@@ -117,11 +121,24 @@ img.background-image {
   }
 }
 
+#scrollMenu {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  height: auto;
+  background: tomato;
+  -webkit-transition: top 2s;
+  transition: top 2s;
+  .show {
+    top: 0
+  }
+}
+
 #about-section {
   h1{
     z-index: 2;
-    font-family: 'Amatic SC';
-    font-size: 175px;
+    font-family: $primary-font;
+    font-size: 150px;
   }
 
   p {
@@ -132,23 +149,16 @@ img.background-image {
   .nav-box {
     height: 75px;
     width: 150px;
-    border: 1px solid $accent;
-    /* font-family: 'Raleway', sans-serif; */
-    transition: all .15s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     cursor: pointer;
-    /* font-family: 'Patrick Hand SC', cursive; */
-    /* font-family: 'Khand', sans-serif; */
-    /* font-family: 'Shadows Into Light', cursive; */
     font-family: $primary-font;
-    /* font-family: 'Beth Ellen', cursive; */
-    /* font-family: 'Cinzel', serif; */
-    /* font-family: $secondary-font; */
     font-size: 30px;
-  }
-
-  .nav-box:hover {
-    background-color: $text-1;
-    color: $base;
+    transition: all .15s ease-in-out;
+    &:hover {
+      background-color: $text-1;
+      color: $base;
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
   }
 
   .social-icons-container > a {
@@ -212,7 +222,6 @@ img.background-image {
     overflow: hidden;
     transition: all .15s ease-in-out;
     background-color: $base;
-    border: 1px solid $accent;
     h1 {
       font-size: 50px;
       color: $text-1;
@@ -272,28 +281,62 @@ img.background-image {
   }
 }
 
+#story-section {
+  .inner {
+    background-color: $base;
+    z-index: 2;
+    margin: 50px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  h1 {
+    font-family: $primary-font;
+    font-size: 5rem;
+    padding: 30px 30px 0 30px;
+  }
+  p {
+    font-family: $secondary-font;
+    padding: 0 30px;
+    font-size: 1.2rem;
+  }
+}
+
 #contact-section {
+  .inner {
+    background-color: $base;
+    z-index: 2;
+    margin: 50px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
   .left {
-    height: 90%;
+    font-family: $secondary-font;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+      mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+      opacity: .4;
+    }
   }
   .right {
-    // background-color: $base2;
-    height: 90%;
-    width: 90%;
-    padding: 30px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    height: 100%;
+    padding: 20px 30px;
   }
   input, textarea {
     background-color: transparent;
-    border: 1px solid $accent;
-    transition: all .15s ease-in-out;
     font-family: $primary-font;
     font-size: 30px;
     padding: 20px;
     margin: 10px;
     color: $text-1;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: all .15s ease-in-out;
     &:focus {
+      // margin: 8px;
+      // padding: 22px;
       outline: none;
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     }
     &::-webkit-input-placeholder { /* Edge */
       opacity: .5;

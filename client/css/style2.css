@@ -75,7 +75,7 @@ html, body, #root {
   animation: fadein 2s;
 }
 
-.main {
+#main {
   overflow: auto;
 }
 
@@ -83,6 +83,10 @@ html, body, #root {
   height: 100vh;
   font-family: "Proza Libre", sans-serif;
   color: #edf5e1;
+}
+
+.theme-border {
+  border: 1px solid #5cdb95;
 }
 
 img.background-image {
@@ -105,10 +109,23 @@ img.background-image.laptop-hands {
   mask-image: linear-gradient(to left, black, rgba(0, 0, 0, 0));
 }
 
+#scrollMenu {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  height: auto;
+  background: tomato;
+  -webkit-transition: top 2s;
+  transition: top 2s;
+}
+#scrollMenu .show {
+  top: 0;
+}
+
 #about-section h1 {
   z-index: 2;
-  font-family: "Amatic SC";
-  font-size: 175px;
+  font-family: "Amatic SC", cursive;
+  font-size: 150px;
 }
 #about-section p {
   font-family: "Josefin Sans", sans-serif;
@@ -117,22 +134,16 @@ img.background-image.laptop-hands {
 #about-section .nav-box {
   height: 75px;
   width: 150px;
-  border: 1px solid #5cdb95;
-  /* font-family: 'Raleway', sans-serif; */
-  transition: all 0.15s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   cursor: pointer;
-  /* font-family: 'Patrick Hand SC', cursive; */
-  /* font-family: 'Khand', sans-serif; */
-  /* font-family: 'Shadows Into Light', cursive; */
   font-family: "Amatic SC", cursive;
-  /* font-family: 'Beth Ellen', cursive; */
-  /* font-family: 'Cinzel', serif; */
-  /* font-family: $secondary-font; */
   font-size: 30px;
+  transition: all 0.15s ease-in-out;
 }
 #about-section .nav-box:hover {
   background-color: #edf5e1;
   color: #05386b;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 #about-section .social-icons-container > a {
   text-decoration: none;
@@ -190,7 +201,6 @@ img.background-image.laptop-hands {
   overflow: hidden;
   transition: all 0.15s ease-in-out;
   background-color: #05386b;
-  border: 1px solid #5cdb95;
 }
 #portfolio-section .image-layer h1 {
   font-size: 50px;
@@ -242,27 +252,58 @@ img.background-image.laptop-hands {
   filter: invert(83%) sepia(15%) saturate(909%) hue-rotate(86deg) brightness(89%) contrast(93%);
 }
 
+#story-section .inner {
+  background-color: #05386b;
+  z-index: 2;
+  margin: 50px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+#story-section h1 {
+  font-family: "Amatic SC", cursive;
+  font-size: 5rem;
+  padding: 30px 30px 0 30px;
+}
+#story-section p {
+  font-family: "Josefin Sans", sans-serif;
+  padding: 0 30px;
+  font-size: 1.2rem;
+}
+
+#contact-section .inner {
+  background-color: #05386b;
+  z-index: 2;
+  margin: 50px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
 #contact-section .left {
-  height: 90%;
+  font-family: "Josefin Sans", sans-serif;
+}
+#contact-section .left img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  -webkit-mask-image: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+  opacity: 0.4;
 }
 #contact-section .right {
-  height: 90%;
-  width: 90%;
-  padding: 30px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  height: 100%;
+  padding: 20px 30px;
 }
 #contact-section input, #contact-section textarea {
   background-color: transparent;
-  border: 1px solid #5cdb95;
-  transition: all 0.15s ease-in-out;
   font-family: "Amatic SC", cursive;
   font-size: 30px;
   padding: 20px;
   margin: 10px;
   color: #edf5e1;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.15s ease-in-out;
 }
 #contact-section input:focus, #contact-section textarea:focus {
   outline: none;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 #contact-section input::-webkit-input-placeholder, #contact-section textarea::-webkit-input-placeholder {
   /* Edge */
