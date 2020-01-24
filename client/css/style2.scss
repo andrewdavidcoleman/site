@@ -124,13 +124,57 @@ img.background-image {
 #scrollMenu {
   position: fixed;
   top: -100%;
+  // top: 0;
   width: 100%;
   height: auto;
-  background: tomato;
-  -webkit-transition: top 2s;
-  transition: top 2s;
-  .show {
-    top: 0
+  -webkit-transition: top .5s;
+  transition: top .7s;
+  font-size: 50px;
+  z-index: 3;
+  background-color: $base;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+  .name {
+    font-family: $primary-font;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    margin: 0 1rem;
+  }
+
+  .nav-box {
+    height: 50px;
+    width: 100px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    cursor: pointer;
+    font-family: $primary-font;
+    font-size: 30px;
+    margin: 10px;
+    transition: all .15s ease-in-out;
+    &:hover {
+      background-color: $text-1;
+      color: $base;
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+  }
+
+  a {
+    text-decoration: none;
+    height: 50px;
+    width: 50px;
+    display: inline;
+    padding-top: 15px;
+    margin-right: 1rem;
+  }
+
+  i {
+    font-size: 36px;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    color: $accent;
+  }
+
+  i:hover {
+    font-size: 40px;
   }
 }
 
@@ -138,7 +182,7 @@ img.background-image {
   h1{
     z-index: 2;
     font-family: $primary-font;
-    font-size: 150px;
+    font-size: 120px;
   }
 
   p {
@@ -358,6 +402,21 @@ img.background-image {
     &:-webkit-autofill:focus {
       -webkit-box-shadow: 0 0 0 500px rgba(0,0,0,0.5) inset;/*your box-shadow*/
       -webkit-text-fill-color: $text-1;
+    }
+  }
+
+  .nav-box {
+    height: 75px;
+    width: 150px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    cursor: pointer;
+    font-family: $primary-font;
+    font-size: 30px;
+    transition: all .15s ease-in-out;
+    &:hover {
+      background-color: $text-1;
+      color: $base;
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     }
   }
 }

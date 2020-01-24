@@ -114,18 +114,56 @@ img.background-image.laptop-hands {
   top: -100%;
   width: 100%;
   height: auto;
-  background: tomato;
-  -webkit-transition: top 2s;
-  transition: top 2s;
+  -webkit-transition: top 0.5s;
+  transition: top 0.7s;
+  font-size: 50px;
+  z-index: 3;
+  background-color: #05386b;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-#scrollMenu .show {
-  top: 0;
+#scrollMenu .name {
+  font-family: "Amatic SC", cursive;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  margin: 0 1rem;
+}
+#scrollMenu .nav-box {
+  height: 50px;
+  width: 100px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+  margin: 10px;
+  transition: all 0.15s ease-in-out;
+}
+#scrollMenu .nav-box:hover {
+  background-color: #edf5e1;
+  color: #05386b;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+#scrollMenu a {
+  text-decoration: none;
+  height: 50px;
+  width: 50px;
+  display: inline;
+  padding-top: 15px;
+  margin-right: 1rem;
+}
+#scrollMenu i {
+  font-size: 36px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  color: #5cdb95;
+}
+#scrollMenu i:hover {
+  font-size: 40px;
 }
 
 #about-section h1 {
   z-index: 2;
   font-family: "Amatic SC", cursive;
-  font-size: 150px;
+  font-size: 120px;
 }
 #about-section p {
   font-family: "Josefin Sans", sans-serif;
@@ -328,6 +366,20 @@ img.background-image.laptop-hands {
   -webkit-box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.5) inset;
   /*your box-shadow*/
   -webkit-text-fill-color: #edf5e1;
+}
+#contact-section .nav-box {
+  height: 75px;
+  width: 150px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+  transition: all 0.15s ease-in-out;
+}
+#contact-section .nav-box:hover {
+  background-color: #edf5e1;
+  color: #05386b;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 /* ANIMATIONS */

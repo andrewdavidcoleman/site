@@ -13,12 +13,29 @@
     <body class="container-fluid">
         <div id="main" class="row">
             <div class="col">
-                <div id="scrollMenu" class="">
-                  TEST
+                <div id="scrollMenu" class="row">
+                  <div class="name d-flex align-items-center">
+                    Andrew
+                    <br>
+                    Coleman
+                  </div>
+                  <div class="nav-box d-flex align-items-center justify-content-center theme-border" onclick="scrollToPortfolio()">portfolio</div>
+                  <div class="nav-box d-flex align-items-center justify-content-center theme-border" onclick="scrollToStory()">story</div>
+                  <div class="nav-box d-flex align-items-center justify-content-center theme-border" onclick="scrollToContact()">contact</div>
+                  <div class="col"></div>
+                  <a class="d-flex align-items-center justify-content-center" target="_blank" href="https://www.linkedin.com/in/andrewdavidcoleman/">
+                      <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a class="d-flex align-items-center justify-content-center" target="_blank" href="https://github.com/andrewdavidcoleman">
+                      <i class="fab fa-github"></i>
+                  </a>
+                  <a class="d-flex align-items-center justify-content-center" target="_blank" href="https://www.instagram.com/andrewdavidcoleman/">
+                      <i class="fab fa-instagram"></i>
+                  </a>
                 </div>
                 <img class="andrew-laptop background-image" src="images/andrew_laptop_square.jpg" alt="Andrew with laptop">
                 <div class="row section p-5" id="about-section">
-                  <div class="col-9 d-flex flex-column">
+                  <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 d-flex flex-column">
                       <div class="row flex-fill align-items-end justify-content-beginning">
                         <h1 class="fade-down-in-4">Andrew Coleman</h1>
                       </div>
@@ -28,16 +45,16 @@
                         </div>
                       </div>
                       <div class="row flex-fill align-items-center">
-                          <div class="col d-flex flex-column align-items-beginning justify-content-center fade-down-in-1">
+                          <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2 d-flex flex-column align-items-beginning justify-content-center fade-down-in-1">
                             <div class="nav-box d-flex align-items-center justify-content-center theme-border" onclick="scrollToPortfolio()">portfolio</div>
                           </div>
-                          <div class="col d-flex flex-column align-items-beginning justify-content-center fade-down-in-2">
+                          <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2 d-flex flex-column align-items-beginning justify-content-center fade-down-in-2">
                             <div class="nav-box d-flex align-items-center justify-content-center theme-border" onclick="scrollToStory()">story</div>
                           </div>
-                          <div class="col d-flex flex-column align-items-beginning justify-content-center fade-down-in-3">
+                          <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2 d-flex flex-column align-items-beginning justify-content-center fade-down-in-3">
                             <div class="nav-box d-flex align-items-center justify-content-center theme-border" onclick="scrollToContact()">contact</div>
                           </div>
-                          <div class="col">
+                          <div class="col-12 col-sm-12 col-md-0 col-lg-3 col-xl-6">
                           </div>
                       </div>
                       <div class="row flex-fill m-0 social-icons-container">
@@ -52,7 +69,7 @@
                           </a>
                       </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-0 col-sm-0 col-md-0 col-lg-3 col-xl-3">
 
                   </div>
                 </div>
@@ -386,7 +403,7 @@
                         <img src="images/piedmont_andrew.jpg" alt="Andrew">
                       </div>
                       <!-- <div class="background-opaque"></div> -->
-                      <form class="col right align-self-center d-flex flex-column" autocomplete="off" action="" method="post">
+                      <form id="contactForm" class="col right align-self-center d-flex flex-column" autocomplete="off" action="" method="post">
                         <div class="row">
                           <input class="flex-fill theme-border" type="text" name="name" value="" autocomplete="nope" placeholder="Your name">
                         </div>
@@ -396,6 +413,7 @@
                         <div class="row flex-fill">
                           <textarea class="flex-fill theme-border" name="message" value="" autocomplete="nope" placeholder="Hi Andrew..."></textarea>
                         </div>
+                        <div class="nav-box d-flex align-items-center justify-content-center theme-border align-self-end" onclick="submitForm()">Send</button>
                       </form>
                     </div>
                   </div>
@@ -405,6 +423,7 @@
 
         <script src="./main.js"></script>
         <script src="./index.js"></script>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
         <script>
 
           function scrollToPortfolio(){
@@ -417,6 +436,10 @@
 
           function scrollToContact(){
             document.getElementById('contact-section').scrollIntoView({ block: 'center',  behavior: 'smooth' });
+          }
+
+          function submitForm() {
+            console.log('submit');
           }
 
         </script>
