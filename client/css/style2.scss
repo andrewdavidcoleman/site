@@ -87,6 +87,10 @@ html, body, #root {
 
 #main {
   overflow: auto;
+  @media screen and (max-width: 375px) {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 }
 
 .section {
@@ -108,6 +112,9 @@ img.background-image {
     right: 0;
     -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
     mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+    @media screen and (max-width: 375px) {
+      right: -100px;
+    }
   }
 
   &.laptop-hands {
@@ -129,19 +136,26 @@ img.background-image {
   height: auto;
   -webkit-transition: top .5s;
   transition: top .7s;
-  font-size: 50px;
   z-index: 3;
   background-color: $base;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
   .name {
+    display: flex;
+    align-items: center;
     font-family: $primary-font;
     font-size: 1.6rem;
     line-height: 1.6rem;
     margin: 0 1rem;
+    @media screen and (max-width: 375px) {
+      display: none;
+    }
   }
 
   .nav-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 50px;
     width: 100px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -150,6 +164,21 @@ img.background-image {
     font-size: 30px;
     margin: 10px;
     transition: all .15s ease-in-out;
+    @media screen and (max-width: 375px) {
+      font-size: 20px;
+      height: 40px;
+      width: unset;
+      margin: 10px 5px;
+      flex: 1 1 auto;
+    }
+    &.arrow {
+      border-radius: 100px;
+      width: 50px;
+      @media screen and (max-width: 375px) {
+        border-radius: 20px;
+        width: 20px;
+      }
+    }
     &:hover {
       background-color: $text-1;
       color: $base;
@@ -164,6 +193,9 @@ img.background-image {
     display: inline;
     padding-top: 15px;
     margin-right: 1rem;
+    @media screen and (max-width: 375px) {
+      display: none;
+    }
   }
 
   i {
@@ -176,18 +208,35 @@ img.background-image {
   i:hover {
     font-size: 40px;
   }
+
+  @media screen and (max-width: 375px) {
+    display: flex;
+    justify-content: center;
+    .spacer {
+      display: none;
+    }
+  }
 }
 
 #about-section {
+  padding: 3rem;
+
   h1{
     z-index: 2;
     font-family: $primary-font;
     font-size: 120px;
+    @media screen and (max-width: 375px) {
+      font-size: 70px;
+    }
   }
 
   p {
     font-family: $secondary-font;
     color: $accent;
+    @media screen and (max-width: 375px) {
+      font-size: .7rem;
+      display: none;
+    }
   }
 
   .nav-box {
@@ -203,6 +252,12 @@ img.background-image {
       color: $base;
       box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     }
+    @media screen and (max-width: 375px) {
+      height: 50px;
+      width: 200px;
+      font-size: 20px;
+      margin: 15px 0;
+    }
   }
 
   .social-icons-container > a {
@@ -212,6 +267,10 @@ img.background-image {
     display: inline;
     padding-top: 15px;
     border-top: 1px solid $text-1;
+    @media screen and (max-width: 375px) {
+      margin-top: 15px;
+      padding-top: 30px;
+    }
   }
 
   .social-icons-container i {
@@ -223,6 +282,10 @@ img.background-image {
 
   .social-icons-container i:hover {
     font-size: 40px;
+  }
+
+  @media screen and (max-width: 375px) {
+    padding: 1rem;
   }
 }
 
@@ -241,7 +304,8 @@ img.background-image {
     border: none;
     border-radius: 0;
     width: 300px;
-    height: 515px;
+    height: 70vh;
+    margin-top: 10vh;
     text-decoration: none;
     color: black;
     background-color: $base;
@@ -250,7 +314,7 @@ img.background-image {
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     &:hover {
       width: 320px;
-      height: 535px;
+      height: 72vh;
       box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
       .image-layer {
         opacity: 0;
@@ -259,6 +323,14 @@ img.background-image {
       .link-layer {
           opacity: 1;
       }
+      @media screen and (max-width: 375px) {
+        width: 92vw;
+        height: 82vh;
+      }
+    }
+    @media screen and (max-width: 375px) {
+      width: 90vw;
+      height: 80vh;
     }
   }
 
@@ -293,6 +365,9 @@ img.background-image {
   .link-layer h1 {
     font-size: 50px;
     font-family: $primary-font;
+    @media screen and (max-width: 375px) {
+      font-size: 30px;
+    }
   }
 
   .icon-wrapper {
@@ -327,28 +402,33 @@ img.background-image {
 
 #story-section {
   .inner {
+    height: 80vh;
     background-color: $base;
     z-index: 2;
-    margin: 50px;
+    margin: 15vh 0 0 0;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    @media screen and (max-width: 375px) {
+      font-size: 30px;
+    }
   }
   h1 {
     font-family: $primary-font;
-    font-size: 5rem;
-    padding: 30px 30px 0 30px;
+    font-size: 1.5rem;
+    padding: 15px 15px 0 15px;
   }
   p {
     font-family: $secondary-font;
-    padding: 0 30px;
-    font-size: 1.2rem;
+    padding: 0 15px;
+    font-size:.75rem;
   }
 }
 
 #contact-section {
   .inner {
+    height: 80vh;
     background-color: $base;
     z-index: 2;
-    margin: 50px;
+    margin: 15vh 0 0 0;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   }
   .left {
@@ -366,6 +446,11 @@ img.background-image {
   .right {
     height: 100%;
     padding: 20px 30px;
+  }
+  #contactForm {
+    @media screen and (max-width: 375px) {
+      flex: 1 1 auto;
+    }
   }
   input, textarea {
     background-color: transparent;
@@ -398,10 +483,15 @@ img.background-image {
       -webkit-box-shadow:0 0 0 500px rgba(255,255,255,0.5) inset; /* Change the color to your own background color */
       -webkit-text-fill-color: $text-1;
     }
-
     &:-webkit-autofill:focus {
       -webkit-box-shadow: 0 0 0 500px rgba(0,0,0,0.5) inset;/*your box-shadow*/
       -webkit-text-fill-color: $text-1;
+    }
+    @media screen and (max-width: 375px) {
+    font-size: 15px;
+    padding: 10px;
+    margin: 5px;
+    flex: 1 1 auto;
     }
   }
 
@@ -413,10 +503,16 @@ img.background-image {
     font-family: $primary-font;
     font-size: 30px;
     transition: all .15s ease-in-out;
+    margin: 5px -5px 0 0;
     &:hover {
       background-color: $text-1;
       color: $base;
       box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+    @media screen and (max-width: 375px) {
+      height: 40px;
+      width: 100px;
+      font-size: 20px;
     }
   }
 }
